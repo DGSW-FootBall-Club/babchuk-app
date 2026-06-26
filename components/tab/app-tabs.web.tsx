@@ -1,7 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 
-// 웹은 NativeTabs 미지원 → 표준 Tabs + Ionicons.
 export default function AppTabs() {
   return (
     <Tabs

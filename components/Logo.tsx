@@ -13,7 +13,11 @@ type LogoProps = {
  * 밥축 (babchuk) wordmark logo.
  * Converted from assets/Logo.svg so it can be tinted and sized via props.
  */
-export function Logo({ size = 120, color = "#000000", background = false }: LogoProps) {
+export function Logo({
+  size = 120,
+  color = "#000000",
+  background = false,
+}: LogoProps) {
   return (
     <Svg width={size} height={size} viewBox="0 0 1024 1024" fill="none">
       {background ? <Rect width={1024} height={1024} fill="#ffffff" /> : null}

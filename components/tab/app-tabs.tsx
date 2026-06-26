@@ -1,6 +1,5 @@
 import { NativeTabs } from "expo-router/unstable-native-tabs";
 
-// iOS 네이티브 탭바 (rn-practice와 동일 방식). SF Symbol 아이콘.
 export default function AppTabs() {
   return (
     <NativeTabs tintColor="#000000">
@@ -34,7 +33,7 @@ export default function AppTabs() {
         <NativeTabs.Trigger.Icon
           sf={{ default: "person", selected: "person.fill" }}
         />
-        <NativeTabs.Trigger.Label>My</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Label>MY</NativeTabs.Trigger.Label>
       </NativeTabs.Trigger>
     </NativeTabs>
   );
