@@ -20,6 +20,8 @@ module.exports = {
     extend: {
       colors: {
         primary: {
+          DEFAULT: 'rgb(var(--color-primary)/<alpha-value>)',
+          subtle: 'rgb(var(--color-primary-subtle)/<alpha-value>)',
           0: 'rgb(var(--color-primary-0)/<alpha-value>)',
           50: 'rgb(var(--color-primary-50)/<alpha-value>)',
           100: 'rgb(var(--color-primary-100)/<alpha-value>)',
@@ -75,6 +77,7 @@ module.exports = {
           950: 'rgb(var(--color-error-950)/<alpha-value>)',
         },
         success: {
+          DEFAULT: 'rgb(var(--color-success)/<alpha-value>)',
           0: 'rgb(var(--color-success-0)/<alpha-value>)',
           50: 'rgb(var(--color-success-50)/<alpha-value>)',
           100: 'rgb(var(--color-success-100)/<alpha-value>)',
@@ -148,6 +151,7 @@ module.exports = {
           950: 'rgb(var(--color-outline-950)/<alpha-value>)',
         },
         background: {
+          DEFAULT: 'rgb(var(--color-background)/<alpha-value>)',
           0: 'rgb(var(--color-background-0)/<alpha-value>)',
           50: 'rgb(var(--color-background-50)/<alpha-value>)',
           100: 'rgb(var(--color-background-100)/<alpha-value>)',
@@ -172,6 +176,23 @@ module.exports = {
           primary: 'rgb(var(--color-indicator-primary)/<alpha-value>)',
           info: 'rgb(var(--color-indicator-info)/<alpha-value>)',
           error: 'rgb(var(--color-indicator-error)/<alpha-value>)',
+        },
+        // App semantic palette (paired with --color-* in global.css)
+        subtle: 'rgb(var(--color-subtle)/<alpha-value>)',
+        foreground: 'rgb(var(--color-foreground)/<alpha-value>)',
+        body: 'rgb(var(--color-body)/<alpha-value>)',
+        placeholder: 'rgb(var(--color-placeholder)/<alpha-value>)',
+        line: {
+          DEFAULT: 'rgb(var(--color-line)/<alpha-value>)',
+          subtle: 'rgb(var(--color-line-subtle)/<alpha-value>)',
+        },
+        muted: {
+          DEFAULT: 'rgb(var(--color-muted)/<alpha-value>)',
+          foreground: 'rgb(var(--color-muted-foreground)/<alpha-value>)',
+        },
+        danger: {
+          DEFAULT: 'rgb(var(--color-danger)/<alpha-value>)',
+          subtle: 'rgb(var(--color-danger-subtle)/<alpha-value>)',
         },
       },
       fontFamily: {

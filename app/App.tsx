@@ -2,15 +2,20 @@ import "@/global.css";
 
 import { useFonts } from "expo-font";
 import { StatusBar } from "expo-status-bar";
-import { NavigationContainer } from "@react-navigation/native";
+import {
+  NavigationContainer,
+  type NavigatorScreenParams,
+} from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
-import RootTabs from "@/navigation/RootTabs";
+import RootTabs, { type RootTabParamList } from "@/navigation/RootTabs";
+import MagazineScreen from "@/features/magazine/MagazineScreen";
 
 export type RootStackParamList = {
-  Tabs: undefined;
+  Tabs: NavigatorScreenParams<RootTabParamList>;
+  Magazine: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -35,6 +40,11 @@ export default function App() {
         <NavigationContainer>
           <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="Tabs" component={RootTabs} />
+            <Stack.Screen
+              name="Magazine"
+              component={MagazineScreen}
+              options={{ headerShown: false }}
+            />
           </Stack.Navigator>
         </NavigationContainer>
         <StatusBar style="dark" />

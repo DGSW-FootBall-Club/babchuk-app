@@ -3,10 +3,29 @@
 @tailwind utilities;
 :root {
   --font-display:
-    Spline Sans, Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol, Noto Color Emoji;
+    Spline Sans, Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --font-mono:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-  --font-rounded: 'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif;
-  --font-serif: Georgia, 'Times New Roman', serif;
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono,
+    Courier New, monospace;
+  --font-rounded:
+    "SF Pro Rounded", "Hiragino Maru Gothic ProN", Meiryo, "MS PGothic",
+    sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+
+  /* RGB triplets so Tailwind opacity modifiers work: rgb(var(--x)/<alpha>) */
+  --color-background: 255 255 255;
+  --color-subtle: 248 249 251;
+  --color-muted: 242 244 246;
+  --color-line: 229 232 235;
+  --color-line-subtle: 232 234 237;
+  --color-foreground: 25 31 40;
+  --color-body: 78 89 104;
+  --color-muted-foreground: 139 149 161;
+  --color-placeholder: 196 201 209;
+  --color-primary: 51 102 255;
+  --color-primary-subtle: 238 243 255;
+  --color-danger: 195 52 49;
+  --color-danger-subtle: 255 245 245;
+  --color-success: 0 150 85;
 }
