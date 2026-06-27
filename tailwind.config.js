@@ -184,6 +184,11 @@ module.exports = {
         inter: ['var(--font-inter)'],
         'space-mono': ['var(--font-space-mono)'],
         rocket: ['Rocket'],
+        pretendard: ['Pretendard-Regular'],
+        'pretendard-medium': ['Pretendard-Medium'],
+        'pretendard-semibold': ['Pretendard-SemiBold'],
+        'pretendard-bold': ['Pretendard-Bold'],
+        'pretendard-extrabold': ['Pretendard-ExtraBold'],
       },
       fontWeight: {
         extrablack: '950',
