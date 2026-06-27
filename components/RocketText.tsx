@@ -1,5 +1,6 @@
-import { Text } from "@/components/ui/text";
+import { Text } from "react-native";
 
+// On RN Text (not gluestack Text) so a passed color className always wins.
 type RocketTextProps = React.ComponentProps<typeof Text>;
 
 export function RocketText({ className, ...props }: RocketTextProps) {

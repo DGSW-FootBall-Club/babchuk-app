@@ -4,6 +4,11 @@ module.exports = {
   content: [
     './app/**/*.{html,js,jsx,ts,tsx,mdx}',
     './components/**/*.{html,js,jsx,ts,tsx,mdx}',
+    './features/**/*.{html,js,jsx,ts,tsx,mdx}',
+    './navigation/**/*.{html,js,jsx,ts,tsx,mdx}',
+    './shared/**/*.{html,js,jsx,ts,tsx,mdx}',
+    './hooks/**/*.{html,js,jsx,ts,tsx,mdx}',
+    './lib/**/*.{html,js,jsx,ts,tsx,mdx}',
     './utils/**/*.{html,js,jsx,ts,tsx,mdx}',
     './*.{html,js,jsx,ts,tsx,mdx}',
     './src/**/*.{html,js,jsx,ts,tsx,mdx}',
@@ -20,8 +25,8 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: 'rgb(var(--color-primary)/<alpha-value>)',
-          subtle: 'rgb(var(--color-primary-subtle)/<alpha-value>)',
+          DEFAULT: '#3366ff',
+          subtle: '#eef3ff',
           0: 'rgb(var(--color-primary-0)/<alpha-value>)',
           50: 'rgb(var(--color-primary-50)/<alpha-value>)',
           100: 'rgb(var(--color-primary-100)/<alpha-value>)',
@@ -77,7 +82,7 @@ module.exports = {
           950: 'rgb(var(--color-error-950)/<alpha-value>)',
         },
         success: {
-          DEFAULT: 'rgb(var(--color-success)/<alpha-value>)',
+          DEFAULT: '#009655',
           0: 'rgb(var(--color-success-0)/<alpha-value>)',
           50: 'rgb(var(--color-success-50)/<alpha-value>)',
           100: 'rgb(var(--color-success-100)/<alpha-value>)',
@@ -151,7 +156,7 @@ module.exports = {
           950: 'rgb(var(--color-outline-950)/<alpha-value>)',
         },
         background: {
-          DEFAULT: 'rgb(var(--color-background)/<alpha-value>)',
+          DEFAULT: '#ffffff',
           0: 'rgb(var(--color-background-0)/<alpha-value>)',
           50: 'rgb(var(--color-background-50)/<alpha-value>)',
           100: 'rgb(var(--color-background-100)/<alpha-value>)',
@@ -177,22 +182,22 @@ module.exports = {
           info: 'rgb(var(--color-indicator-info)/<alpha-value>)',
           error: 'rgb(var(--color-indicator-error)/<alpha-value>)',
         },
-        // App semantic palette (paired with --color-* in global.css)
-        subtle: 'rgb(var(--color-subtle)/<alpha-value>)',
-        foreground: 'rgb(var(--color-foreground)/<alpha-value>)',
-        body: 'rgb(var(--color-body)/<alpha-value>)',
-        placeholder: 'rgb(var(--color-placeholder)/<alpha-value>)',
+        // App semantic palette (direct hex — reliable on native).
+        subtle: '#f8f9fb',
+        foreground: '#191f28',
+        body: '#4e5968',
+        placeholder: '#c4c9d1',
         line: {
-          DEFAULT: 'rgb(var(--color-line)/<alpha-value>)',
-          subtle: 'rgb(var(--color-line-subtle)/<alpha-value>)',
+          DEFAULT: '#e5e8eb',
+          subtle: '#e8eaed',
         },
         muted: {
-          DEFAULT: 'rgb(var(--color-muted)/<alpha-value>)',
-          foreground: 'rgb(var(--color-muted-foreground)/<alpha-value>)',
+          DEFAULT: '#f2f4f6',
+          foreground: '#8b95a1',
         },
         danger: {
-          DEFAULT: 'rgb(var(--color-danger)/<alpha-value>)',
-          subtle: 'rgb(var(--color-danger-subtle)/<alpha-value>)',
+          DEFAULT: '#c33431',
+          subtle: '#fff5f5',
         },
       },
       fontFamily: {
