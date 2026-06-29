@@ -14,6 +14,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
 import RootTabs, { type RootTabParamList } from "@/navigation/RootTabs";
 import MagazineScreen from "@/features/magazine/MagazineScreen";
+import MatchDetailScreen from "@/features/match/MatchDetailScreen";
 import OnboardingScreen from "@/features/auth/onboarding/OnboardingScreen";
 import { AuthStack } from "@/navigation/AuthStack";
 import { useTokenStore } from "@/shared/store/tokenStore";
@@ -23,6 +24,7 @@ export type RootStackParamList = {
   Tabs: NavigatorScreenParams<RootTabParamList>;
   Magazine: undefined;
   Onboarding: undefined;
+  MatchDetail: { matchId: number };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -54,6 +56,7 @@ function MainNavigator() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Tabs" component={RootTabs} />
       <Stack.Screen name="Magazine" component={MagazineScreen} />
+      <Stack.Screen name="MatchDetail" component={MatchDetailScreen} />
     </Stack.Navigator>
   );
 }

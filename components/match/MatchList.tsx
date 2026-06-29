@@ -1,9 +1,7 @@
-import { ActivityIndicator } from "react-native";
-
 import { AppText } from "@/components/AppText";
 import { VStack } from "@/components/ui/vstack";
-import { Box } from "@/components/ui/box";
 import { MatchCard } from "@/components/match/MatchCard";
+import { MatchCardSkeleton } from "@/components/match/MatchCardSkeleton";
 import { useMatches } from "@/features/home/hooks/useMatches";
 
 type MatchListProps = {
@@ -16,12 +14,13 @@ export function MatchList({ selectedDate }: MatchListProps) {
   // 전체 매치 중 선택한 날짜와 일치하는 것만 추림
   const filtered = matches?.filter((m) => m.matchDate === selectedDate) ?? [];
 
-  // 1) 로딩 중
+  // 1) 로딩 중 → 매치 카드 모양의 스켈레톤 2개
   if (isLoading) {
     return (
-      <Box className="py-16">
-        <ActivityIndicator />
-      </Box>
+      <VStack space="md" className="px-4">
+        <MatchCardSkeleton />
+        <MatchCardSkeleton />
+      </VStack>
     );
   }
 

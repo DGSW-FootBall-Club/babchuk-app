@@ -1,9 +1,7 @@
-import { ActivityIndicator } from "react-native";
-
 import { AppText } from "@/components/AppText";
 import { VStack } from "@/components/ui/vstack";
-import { Box } from "@/components/ui/box";
 import { MatchCard } from "@/components/match/MatchCard";
+import { MatchCardSkeleton } from "@/components/match/MatchCardSkeleton";
 import { useMatches } from "@/features/home/hooks/useMatches";
 import { formatMatchDate } from "@/shared/utils/formatMatch";
 
@@ -25,9 +23,11 @@ export function ScheduleMatchList({ selectedDate }: ScheduleMatchListProps) {
       </AppText>
 
       {isLoading ? (
-        <Box className="py-12">
-          <ActivityIndicator />
-        </Box>
+        // 로딩 → 스켈레톤 카드 2개
+        <VStack space="md">
+          <MatchCardSkeleton />
+          <MatchCardSkeleton />
+        </VStack>
       ) : filtered.length === 0 ? (
         // 매치 없음
         <VStack space="xs" className="items-center py-12">

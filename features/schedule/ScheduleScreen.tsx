@@ -24,7 +24,8 @@ export default function ScheduleScreen() {
       <Header title="일정" />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingBottom: 24 }}
+        // 플로팅 탭바에 가리지 않도록 하단 여백 확보
+        contentContainerStyle={{ paddingBottom: 110 }}
       >
         <VStack space="md" className="pt-2">
           {/* 월 달력: 날짜 선택 + 매치 있는 날 점 표시 */}

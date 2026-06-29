@@ -1,4 +1,6 @@
-import { Alert, Image, Pressable, View } from "react-native";
+import { Image, Pressable, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 import { AppText } from "@/components/AppText";
 import { VStack } from "@/components/ui/vstack";
@@ -7,6 +9,7 @@ import { Box } from "@/components/ui/box";
 import { MatchStatusLabel, statusStyle } from "@/entities/common/Enum";
 import { formatMatchDate, formatMatchTime } from "@/shared/utils/formatMatch";
 import type { MatchListResponse } from "@/entities/match/types/response/MatchResponse";
+import type { RootStackParamList } from "@/app/App";
 
 const profileFallback = require("@/assets/icons/profile.png");
 
@@ -28,12 +31,13 @@ function TeamCaptain({ name, image }: { name: string; image: string | null }) {
 type MatchCardProps = { match: MatchListResponse };
 
 export function MatchCard({ match }: MatchCardProps) {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
   return (
     <Pressable
-      // 매치 상세 화면은 아직 없어서 임시 안내. (추후 navigation.navigate로 교체)
-      onPress={() =>
-        Alert.alert("매치 상세", "상세 화면은 곧 추가될 예정이에요.")
-      }
+      // 카드를 누르면 매치 상세 화면으로 이동 (matchId 전달)
+      onPress={() => navigation.navigate("MatchDetail", { matchId: match.id })}
       className="active:opacity-90"
     >
       <Box className="relative overflow-hidden rounded-2xl bg-primary-subtle">

@@ -23,7 +23,8 @@ export default function HomeScreen() {
       <Header title="밥축" />
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingBottom: 24 }}
+        // 플로팅 탭바에 가리지 않도록 하단 여백 확보
+        contentContainerStyle={{ paddingBottom: 110 }}
       >
         <VStack space="lg">
           {/* 상단 배너 + 빠른 메뉴 (좌우 여백 16) */}
