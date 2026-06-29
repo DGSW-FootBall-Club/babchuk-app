@@ -76,6 +76,10 @@ api.interceptors.response.use(
 
     notify(newToken);
     if (!newToken) {
+      console.warn(
+        "[auth] token refresh failed (401) -> clearing token. url:",
+        original.url,
+      );
       useTokenStore.getState().clearToken();
       return Promise.reject(error);
     }
